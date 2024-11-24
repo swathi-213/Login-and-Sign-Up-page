@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Login and Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <!-- Forms Toggle Buttons -->
+            <div class="toggle-container">
+                <button id="login-btn" class="toggle-btn active" onclick="showLogin()">Login</button>
+                <button id="signup-btn" class="toggle-btn" onclick="showSignup()">Sign Up</button>
+            </div>
+
+            <!-- Login Form -->
+            <div id="login-form" class="form-content">
+                <h2>Login</h2>
+                <form action="#" method="post" onsubmit="return validateLogin()">
+                    <div class="form-group">
+                        <label for="login-email">Email:</label>
+                        <input type="email" id="login-email" name="email" required>
+                        <span class="error-message" id="login-email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" name="password" required>
+                        <span class="error-message" id="login-password-error"></span>
+                    </div>
+                    <button type="submit" class="btn">Login</button>
+                </form>
+            </div>
+
+            <!-- Signup Form -->
+            <div id="signup-form" class="form-content hidden">
+                <h2>Sign Up</h2>
+                <form action="#" method="post" onsubmit="return validateSignup()">
+                    <div class="form-group">
+                        <label for="signup-name">Full Name:</label>
+                        <input type="text" id="signup-name" name="name" required>
+                        <span class="error-message" id="signup-name-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email:</label>
+                        <input type="email" id="signup-email" name="email" required>
+                        <span class="error-message" id="signup-email-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password:</label>
+                        <input type="password" id="signup-password" name="password" required>
+                        <span class="error-message" id="signup-password-error"></span>
+                    </div>
+                    <button type="submit" class="btn">Sign Up</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
